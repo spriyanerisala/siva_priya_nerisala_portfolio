@@ -455,7 +455,7 @@ export default function Portfolio() {
             color: "#a8d8ff", letterSpacing: "0.05em",
             marginBottom: 28, minHeight: "2em",
           }}>
-            <Typewriter texts={["MERN Stack Developer", "Full-Stack Engineer", "React.js Specialist", "Web Developer"]} />
+            <Typewriter texts={["MERN Stack Developer", "Full-Stack Developer", "Web Developer", "AI Automation Engineer"]} />
           </div>
           <p style={{
             maxWidth: 520, margin: "0 auto 36px",
