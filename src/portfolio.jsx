@@ -3,19 +3,38 @@ import { useState, useEffect, useRef } from "react";
 
 const SKILLS = {
   Frontend: ["HTML", "CSS", "JavaScript", "React.js", "Tailwind CSS"],
-  Backend: ["Node.js", "Express.js", "RESTful APIs", "MySQL"],
-  Database: ["MongoDB Atlas", "CRUD Operations", "Redis (Upstash)"],
-  "Tools & Auth": ["Git", "GitHub", "Postman", "JWT Auth", "OAuth (Firebase)", "Stripe Payments"],
-  Deployment: ["Vercel", "Netlify", "Render"],
+  Backend: ["Node.js", "Express.js", "REST APIs"],
+  Database: ["MongoDB", "Redis"],
+  "AI & Tools": ["n8n", "AI Agents", "RAG", "Qdrant", "Git", "GitHub", "Postman", "JWT Authentication"],
+  Deployment: ["Vercel", "Render"],
 };
 
 const PROJECTS = [
+  {
+  title: "AI Job Copilot",
+  description:
+    "Developed an AI-powered career assistant for resume analysis, ATS scoring, job matching, interview preparation, and role-specific resume generation using React.js and n8n.",
+      tech: ["React.js", "Tailwind CSS", "n8n", "Gemini AI"],
+  github: "https://github.com/spriyanerisala/ai_job_copilot.git",
+  demo:"https://ai-job-copilot-jet.vercel.app/",
+  icon: "",
+},
+{
+  title: "AI-Powered Resume Analyzer Chatbot",
+  description:
+    "AI-powered resume analysis chatbot with semantic search and vector embeddings. Implemented a RAG-based workflow to answer natural language questions from resume data with context-aware responses. Built using React.js and n8n with embeddings-based retrieval.",
+  tech: ["React.js", "n8n", "Qdrant", "Embeddings", "LLMs"],
+  github: "https://github.com/spriyanerisala/resume_analyse_n8n_vector_rag.git",
+  demo:"https://resume-analyser-khaki-zeta.vercel.app/",
+  icon: "",
+},
   {
     title: "Alumni Website",
     description:
       "Full-stack alumni management web app with secure user/admin authentication. Admin panel with CRUD operations using MongoDB & Express.js. Responsive React UI deployed on Vercel.",
     tech: ["React.js", "Node.js", "MongoDB", "Express.js", "Vercel"],
     github: "https://github.com/spriyanerisala/alumni_website",
+    demo:"",
     icon: "",
   },
   {
@@ -24,8 +43,11 @@ const PROJECTS = [
       "Full-stack book e-commerce platform with JWT auth, admin panel, Stripe payments, and Redis caching. Complete product/user/order management with responsive React UI.",
     tech: ["React.js", "Node.js", "MongoDB", "Stripe", "Redis", "JWT"],
     github: "https://github.com/spriyanerisala/book-stall-ecommerce.git",
+    demo:"",
     icon: "",
   },
+  
+
 ];
 
 const NAV_ITEMS = ["About", "Skills", "Projects", "Education", "Contact"];
@@ -558,7 +580,7 @@ export default function Portfolio() {
                   }}>{t}</span>
                 ))}
               </div>
-              <a href={p.github} target="_blank" rel="noreferrer"
+              {/* <a href={p.github} target="_blank" rel="noreferrer"
                 style={{
                   display: "inline-flex", alignItems: "center", gap: 7,
                   fontFamily: "'Orbitron', monospace", fontSize: "0.7rem",
@@ -570,7 +592,63 @@ export default function Portfolio() {
                 onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.boxShadow = "none"; }}
               >
                 {"</>"} View Code
-              </a>
+              </a> */}
+              <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+  <a
+    href={p.github}
+    target="_blank"
+    rel="noreferrer"
+    style={{
+      display: "inline-flex",
+      alignItems: "center",
+      gap: 7,
+      fontFamily: "'Orbitron', monospace",
+      fontSize: "0.7rem",
+      letterSpacing: "0.1em",
+      textTransform: "uppercase",
+      color: "#00d4ff",
+      border: "1px solid rgba(0,212,255,0.35)",
+      padding: "9px 16px",
+      borderRadius: 4,
+      transition: "all 0.3s",
+    }}
+    onMouseEnter={e => {
+      e.currentTarget.style.background = "rgba(0,212,255,0.1)";
+      e.currentTarget.style.boxShadow = "0 0 12px rgba(0,212,255,0.3)";
+    }}
+    onMouseLeave={e => {
+      e.currentTarget.style.background = "transparent";
+      e.currentTarget.style.boxShadow = "none";
+    }}
+  >
+    {"</>"} View Code
+  </a>
+
+  {p.demo && (
+    <a
+      href={p.demo}
+      target="_blank"
+      rel="noreferrer"
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 7,
+        fontFamily: "'Orbitron', monospace",
+        fontSize: "0.7rem",
+        letterSpacing: "0.1em",
+        textTransform: "uppercase",
+        color: "#020818",
+        background: "linear-gradient(135deg,#0066ff,#00d4ff)",
+        padding: "9px 16px",
+        borderRadius: 4,
+        fontWeight: "700",
+        transition: "all 0.3s",
+      }}
+    >
+      🚀 Live Demo
+    </a>
+  )}
+</div>
             </div>
           ))}
         </div>
