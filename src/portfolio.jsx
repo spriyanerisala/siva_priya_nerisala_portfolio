@@ -34,7 +34,7 @@ const PROJECTS = [
       "Full-stack alumni management web app with secure user/admin authentication. Admin panel with CRUD operations using MongoDB & Express.js. Responsive React UI deployed on Vercel.",
     tech: ["React.js", "Node.js", "MongoDB", "Express.js", "Vercel"],
     github: "https://github.com/spriyanerisala/alumni_website",
-    demo:"",
+    demo:"https://alumni-website-clg.vercel.app/",
     icon: "",
   },
   {
