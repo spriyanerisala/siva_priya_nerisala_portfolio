@@ -5,11 +5,20 @@ const SKILLS = {
   Frontend: ["HTML", "CSS", "JavaScript", "React.js", "Tailwind CSS"],
   Backend: ["Node.js", "Express.js", "REST APIs"],
   Database: ["MongoDB", "Redis"],
-  "AI & Tools": ["n8n", "AI Agents", "RAG", "Qdrant", "Git", "GitHub", "Postman", "JWT Authentication"],
+  "AI & Tools": ["n8n", "AI Agents", "AI Automation", "Agentic AI", "MCP (Model Context Protocol)", "RAG", "Qdrant", "Antigravity", "Claude AI", "Cursor", "Git", "GitHub", "Postman", "JWT Authentication"],
   Deployment: ["Vercel", "Render"],
 };
 
 const PROJECTS = [
+  {
+    title: "StudentPilot AI",
+    description:
+      "All-in-one AI student learning and career platform featuring interactive course viewers, a 24/7 AI mentor, n8n-powered PDF note summarization, smart resume ATS scoring, AI mock interview simulator, and placement analytics.",
+    tech: ["React.js", "TypeScript", "Tailwind CSS", "n8n", "Supabase", "Stripe"],
+    github: "https://github.com/spriyanerisala/student_copilot",
+    demo: "https://student-copilot-ten.vercel.app/",
+    icon: "",
+  },
   {
   title: "AI Job Copilot",
   description:
